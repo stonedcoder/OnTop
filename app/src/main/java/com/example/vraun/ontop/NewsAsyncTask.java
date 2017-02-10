@@ -33,6 +33,7 @@ public class NewsAsyncTask extends AsyncTask<Void, Void, ArrayList<News>> {
         String jsonResponse = "";
         try {
             jsonResponse = makeHttpRequest(url);
+            Log.e("url" , "pass");
         } catch (IOException e) {
             Log.e("BookAsyncTask", "Error retrieving data from JSON !!!");
         }
