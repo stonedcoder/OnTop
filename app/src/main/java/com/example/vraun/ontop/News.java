@@ -61,7 +61,9 @@ public class News {
      * @return
      */
     public boolean hasImage() {
-        return mImageResouce != NO_IMAGE_PROVIDED;
+        return mImageResouce != NO_IMAGE;
     }
+
+    private static final String NO_IMAGE = "NA";
 
 }
