@@ -73,9 +73,13 @@ public class MainActivity extends AppCompatActivity {
     private void clearNews(){
         news.clear();
     }
-    private String getUrl(String keyword){
-        String url = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=587635f33026431bbcb5cae8afa9e11e";
+    private String getUrl(String keyword) {
+        String url = "http://content.guardianapis.com/search?" +
+                "show-fields=thumbnail" +
+                "&show-tags=contributor" +
+                "&q=" + keyword +
+                "&api-key=test";
         return url;
-
     }
+
 }

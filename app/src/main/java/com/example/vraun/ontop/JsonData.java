@@ -27,7 +27,7 @@ public class JsonData {
             JSONArray resultsArray = responseObject.getJSONArray("results");
             for (int i = 0; i < resultsArray.length(); i++) {
                 JSONObject arrayObject = resultsArray.optJSONObject(i);
-                String title = arrayObject.optString("title");
+                String title = arrayObject.optString("webTitle");
                 String url = arrayObject.optString("webUrl");
                 JSONObject fieldsObject = arrayObject.optJSONObject("fields");
                 String thumbnailImage = "";
@@ -69,6 +69,5 @@ public class JsonData {
         }
         return news;
     }
-
 
 }
