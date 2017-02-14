@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 /**
@@ -33,12 +33,12 @@ public class Adapter extends ArrayAdapter<News> {
         TextView titleTextView = (TextView) newsListItem.findViewById(R.id.headline);
         TextView authorTextView = (TextView) newsListItem.findViewById(R.id.author);
 
-//        if (currentNews.hasImage()) {
-//            Picasso.with(getContext()).load(currentNews.getImageResource()).into(newsImageView);
-//            newsImageView.setVisibility(View.VISIBLE);
-//        } else {
-//            newsImageView.setVisibility(View.GONE);
-//        }
+        if (currentNews.hasImage()) {
+            Picasso.with(getContext()).load(currentNews.getImageResource()).into(newsImageView);
+            newsImageView.setVisibility(View.VISIBLE);
+        } else {
+            newsImageView.setVisibility(View.GONE);
+        }
 
         titleTextView.setText(currentNews.getTitle());
         authorTextView.setText(currentNews.getAuthor());
