@@ -14,8 +14,8 @@
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Data."
-        android:textSize="26dp"
+        android:text="@string/no_data"
+        android:textSize="@dimen/text_size"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/no_data_value"
         />
